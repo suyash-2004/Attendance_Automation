@@ -2,7 +2,7 @@
 
 Welcome to the Attendance Automation project! This is a mini project for my 2nd year (3rd semester) coursework, focusing on automating attendance tracking through the power of Python with face recognition.
 
-![Face Recognition Animation](https://github.com/suyash-2004/your-repo/blob/main/face-recognition-animation.gif)
+![Face Recognition Animation](https://media.giphy.com/media/3o7abnQiguzMTaYlOM/giphy.gif)
 
 ## Overview
 
