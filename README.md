@@ -26,7 +26,7 @@ Consider adding features such as automatic date and time stamping, a user-friend
 
 
 <img width="344" alt="image" src="https://github.com/suyash-2004/Attendance_Automation/assets/61971096/62481c20-54a0-466a-b2fd-b237c13b672b">
-MYSql Database
+- MYSql Database
 
 GIFs and images can be used to demonstrate your project visually.
 
