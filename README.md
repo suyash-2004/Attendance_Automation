@@ -25,6 +25,7 @@ Detailed instructions on setting up and running the project can be found in the 
 Consider adding features such as automatic date and time stamping, a user-friendly graphical interface, and comprehensive logging for improved usability and error handling.
 
 ![Project Screenshot](your-image.png)
+<img width="344" alt="image" src="https://github.com/suyash-2004/Attendance_Automation/assets/61971096/62481c20-54a0-466a-b2fd-b237c13b672b">
 
 GIFs and images can be used to demonstrate your project visually.
 
