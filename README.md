@@ -33,6 +33,6 @@ Consider adding features such as automatic date and time stamping, a user-friend
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE.txt) - see the [LICENSE.txt](LICENSE) file for details.
+This project is licensed under the [GNU General Public License (GPL)](LICENSE) - see the [LICENSE.txt](LICENSE) file for details.
 
 Feel free to explore the project, contribute, or adapt it for your own attendance tracking needs. Your feedback and contributions are welcome!
