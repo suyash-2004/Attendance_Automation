@@ -2,6 +2,8 @@
 
 Welcome to the Attendance Automation project! This is a mini project for my 2nd year (3rd semester) coursework, focusing on automating attendance tracking through the power of Python with face recognition.
 
+![Face Recognition Animation](https://github.com/suyash-2004/your-repo/blob/main/face-recognition-animation.gif)
+
 ## Overview
 
 This project leverages the Face Recognition library in Python, along with other essential libraries such as OpenCV, NumPy, and MySQL Connector. It operates in real-time, capturing frames from a webcam, detecting faces, and comparing them to a reference database of individuals stored in the 'ImagesAttendance' folder.
