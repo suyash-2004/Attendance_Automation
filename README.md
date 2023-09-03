@@ -6,6 +6,7 @@ Welcome to the Attendance Automation project! This is a mini project for my 2nd 
 <div align="center">
   <img src="https://media.giphy.com/media/3o7abnQiguzMTaYlOM/giphy.gif" alt="Face Recognition Animation">
 </div>
+
 ## Overview
 
 This project leverages the Face Recognition library in Python, along with other essential libraries such as OpenCV, NumPy, and MySQL Connector. It operates in real-time, capturing frames from a webcam, detecting faces, and comparing them to a reference database of individuals stored in the 'ImagesAttendance' folder.
