@@ -31,9 +31,8 @@ Detailed instructions on setting up and running the project can be found in the 
 Consider adding features such as automatic date and time stamping, a user-friendly graphical interface, and comprehensive logging for improved usability and error handling.
 
 
+## License
 
-
-
-GIFs and images can be used to demonstrate your project visually.
+This project is licensed under the [MIT License](LICENSE.txt) - see the [LICENSE.txt](LICENSE) file for details.
 
 Feel free to explore the project, contribute, or adapt it for your own attendance tracking needs. Your feedback and contributions are welcome!
