@@ -1,4 +1,4 @@
-# Attendance Automation using Python with Face Recognition
+u# Attendance Automation using Python with Face Recognition
 
 Welcome to the Attendance Automation project! This is a mini project for my 2nd year (3rd semester) coursework, focusing on automating attendance tracking through the power of Python with face recognition.
 
@@ -28,7 +28,7 @@ Detailed instructions on setting up and running the project can be found in the 
 
 ## Future Enhancements
 
-Consider adding features such as automatic date and time stamping, a user-friendly graphical interface, and comprehensive logging for improved usability and error handling.
+Future enhancements may include features such as automatic date and time stamping, a user-friendly graphical interface, and comprehensive logging for improved usability and error handling.
 
 
 ## License
