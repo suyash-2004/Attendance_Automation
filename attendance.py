@@ -2,6 +2,7 @@ import cv2
 import face_recognition
 import numpy as np
 import csv
+import time
 from _datetime import datetime
 import mysql.connector as sqlc
 
@@ -31,7 +32,12 @@ def getimages():
 
 def find_encodings(images):
     encodlist = []
-    for image in images:
+    max_dots = 6
+    for i, image in enumerate(images):
+        dots = "* " * (i % (max_dots + 1))
+        #space = "  " * (max_dots - (i % (max_dots + 1)))
+        print(f"Encoding in progress: {dots}", end='\r', flush=True)
+
         image = cv2.cvtColor(image,cv2.COLOR_BGR2RGB)
         encode = face_recognition.face_encodings(image, model='cnn')
         encodlist.append(encode[0])
@@ -87,11 +93,21 @@ def mark_attendance(name_, roll_, pn_, dtstring_):
             sno_ = len(data_attnd) - 1
             sno_ += 1
             att.writelines(f'{sno_},{name_},{roll_},{pn_},P,{dtstring_}\n')
+
+
 getimages()
+
+print("Encoding Images")
+time.sleep(0.5)
 knownencodings = find_encodings(images)
+print("Encoding Complete!")
+
 default_table()
 clear_attendance_file()
-print("Encoding Complete!")
+
+print("Opening WebCam")
+
+time.sleep(0.3)
 
 cap = cv2.VideoCapture(0)
 
