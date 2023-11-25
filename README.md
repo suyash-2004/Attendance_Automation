@@ -110,14 +110,17 @@ cv2.destroyAllWindows()
 ```
 ## Saving Attendance to Database:
   -Inside the while loop, the script checks if the user has pressed the 'q' key, If the condition is true, the following actions are taken:
-      +Read Attendance Data from CSV:
+      __Read Attendance Data from CSV:__
             -The script reads the attendance data from the CSV file ('**attendance.csv**'):
+            
             <img src="https://github.com/suyash-2004/Attendance_Automation/assets/61971096/639dd3ab-08b8-4569-afa9-f770dd28b611" alt="Screenshot" width="600"/>
-      +Update Database with Attendance Data: 
+      __Update Database with Attendance Data:__
             -It processes each line of attendance data and updates the MySQL database:
+            
             <img src="https://github.com/suyash-2004/Attendance_Automation/assets/61971096/da36580c-1ca7-4a89-b4f0-8d5fdfc36948" alt="Screenshot" width="600"/>
-      +Commit Changes and Close Database Connection: 
+      __Commit Changes and Close Database Connection:__
             -After updating the database, it commits the changes and closes the database connection:
+            
             <img src="https://github.com/suyash-2004/Attendance_Automation/assets/61971096/559750cc-0cbc-4b41-9a6d-1e88639c0f46" alt="Screenshot" width="600"/>
 
 ## Usage
