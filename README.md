@@ -60,9 +60,7 @@ This project leverages the Face Recognition library in Python, along with other 
 
 <div class="scrollable-code">
 
-# Your large Python code goes here
-def example_function():
-    # ... getimages()
+getimages()
 
 print("Encoding Images")
 time.sleep(0.5)
