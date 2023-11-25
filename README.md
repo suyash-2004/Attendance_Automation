@@ -26,7 +26,7 @@ This project leverages the Face Recognition library in Python, along with other 
 
   ### 1.)Loading Images:
   
-<img src="https://github.com/suyash-2004/Attendance_Automation/assets/61971096/15a8fe56-cedf-4ccd-a053-20d8ecfc5ee5" alt="Screenshot" width="400"/>
+<img src="https://github.com/suyash-2004/Attendance_Automation/assets/61971096/15a8fe56-cedf-4ccd-a053-20d8ecfc5ee5" alt="Screenshot" width="600"/>
   
 
 ## Usage
