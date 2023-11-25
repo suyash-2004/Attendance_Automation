@@ -26,18 +26,8 @@ This project leverages the Face Recognition library in Python, along with other 
 
   ### 1.)Loading Images:
   
-  ```
-def getimages():
-    path = "ImagesAttendance"
-    global images, classnames
-    with open('Attendance_Database.csv', 'r') as att_db:
-        reader = csv.reader(att_db)
-        next(att_db)
-        for row in reader:
-            curimg = cv2.imread(f'{path}/{row[5]}')
-            images.append(curimg)
-            classnames.append(row[1].upper())
-```
+ ![image](https://github.com/suyash-2004/Attendance_Automation/assets/61971096/15a8fe56-cedf-4ccd-a053-20d8ecfc5ee5)
+
   
 
 ## Usage
