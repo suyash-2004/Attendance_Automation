@@ -25,6 +25,7 @@ This project leverages the Face Recognition library in Python, along with other 
 ## Methodology
 
   ### 1.)Loading Images:
+  
   ```def getimages():
     path = "ImagesAttendance"
     global images, classnames
