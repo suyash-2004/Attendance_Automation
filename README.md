@@ -49,7 +49,8 @@ This project leverages the Face Recognition library in Python, along with other 
   -It reads the existing attendance data, checks if the current name is already in the list and if not, appends a new entry to the file with the corresponding details.
 
   ### 2.)Main Execution:
-  
+  -The main loop captures frames from the webcam, performs face recognition, and marks attendance when a recognized face matches a known face.
+    
 ```
 getimages()
 
