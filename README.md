@@ -118,10 +118,10 @@ while True:
 
 cv2.destroyAllWindows()
 
-# ...
+
 
 </div>
-
+```
 
 ## Usage
 
