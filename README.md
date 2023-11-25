@@ -22,6 +22,10 @@ This project leverages the Face Recognition library in Python, along with other 
 - **Data Persistence:** To ensure data permanence, users can press "q" to end the program, triggering the automatic transfer of recorded attendance data to a MySQL database.
 ![Project Screenshot](https://github.com/suyash-2004/Attendance_Automation/assets/61971096/62481c20-54a0-466a-b2fd-b237c13b672b)
 
+## Methodology
+
+### Marking Attendance:
+
 ## Usage
 
 Detailed instructions on setting up and running the project can be found in the project documentation.
