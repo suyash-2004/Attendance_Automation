@@ -44,12 +44,14 @@ def default_table():
         data_db = att_db.readlines()
         cursor.execute("SELECT * FROM attendance.class_att")
         data = cursor.fetchall()
-        if len(data) == 0:
-            for line in data_db[1:]:
-                entry = line.split(",")
-                val = (sno_, entry[1], entry[2], entry[3])
+        for line in data_db[1:]:
+            entry = line.split(",")
+            val = (entry[0], entry[1], entry[2], entry[3])
+            if len(data) == 0:
                 cursor.execute(query_default, val)
-                sno_ += 1
+            else:
+                val = ('A', '-', entry[2])
+                cursor.execute(query_update, val )
             con.commit()
 
 
@@ -67,6 +69,11 @@ def getstd_details_db(nm):
     return result
 
 
+def clear_attendance_file():
+    with open('attendance.csv', 'w') as att:
+        att.write('S.No.,Name,Roll No.,Phone No.,P/A,Time\n')
+
+
 def mark_attendance(name_, roll_, pn_, dtstring_):
     entry_att = []
     global sno_
@@ -79,11 +86,11 @@ def mark_attendance(name_, roll_, pn_, dtstring_):
         if name_ not in names_att:
             sno_ = len(data_attnd) - 1
             sno_ += 1
-            att.writelines(f'\n{sno_},{name_},{roll_},{pn_},P,{dtstring_}')
-
+            att.writelines(f'{sno_},{name_},{roll_},{pn_},P,{dtstring_}\n')
 getimages()
 knownencodings = find_encodings(images)
 default_table()
+clear_attendance_file()
 print("Encoding Complete!")
 
 cap = cv2.VideoCapture(0)
