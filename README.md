@@ -113,7 +113,7 @@ cv2.destroyAllWindows()
       __Read Attendance Data from CSV:__
             -The script reads the attendance data from the CSV file ('**attendance.csv**'):
             <img src="https://github.com/suyash-2004/Attendance_Automation/assets/61971096/639dd3ab-08b8-4569-afa9-f770dd28b611" alt="Screenshot" width="600"/>
-      __Update Database with Attendance Data:__
+      __\nUpdate Database with Attendance Data:__
             -It processes each line of attendance data and updates the MySQL database:
             <img src="https://github.com/suyash-2004/Attendance_Automation/assets/61971096/da36580c-1ca7-4a89-b4f0-8d5fdfc36948" alt="Screenshot" width="600"/>
       __Commit Changes and Close Database Connection:__
