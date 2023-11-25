@@ -22,11 +22,105 @@ This project leverages the Face Recognition library in Python, along with other 
 - **Data Persistence:** To ensure data permanence, users can press "q" to end the program, triggering the automatic transfer of recorded attendance data to a MySQL database.
 ![Project Screenshot](https://github.com/suyash-2004/Attendance_Automation/assets/61971096/62481c20-54a0-466a-b2fd-b237c13b672b)
 
-## Methodology
-
+# Methodology
+## Retrieving Images and Generating Face Encodings:
   ### 1.)Loading Images:
   
 <img src="https://github.com/suyash-2004/Attendance_Automation/assets/61971096/15a8fe56-cedf-4ccd-a053-20d8ecfc5ee5" alt="Screenshot" width="600"/>
+  
+  -The **getimages** function reads the CSV file **Attendance_Database.csv** and retrieves the image file names from the **"ImagesAttendance"** folder.
+  -Images are loaded using OpenCV (**cv2.imread**) and appended to the **images** list.
+  -Corresponding class names (student names) are added to the **classnames** list.
+
+  ### 2.)Encoding Faces:
+  
+<img src="https://github.com/suyash-2004/Attendance_Automation/assets/61971096/80786a4b-a94c-4662-bd83-0627eca32176" alt="Screenshot" width="600"/>
+
+  -The **find_encodings** function takes a list of images as input and encodes the faces in each image using the **face_recognition** library.
+  -The encoding is performed in RGB format (**cv2.cvtColor(image, cv2.COLOR_BGR2RGB)**), and the encodings are added to the **encodlist**.
+
+## Marking Attendance:
+
+  ### 1.)Marking Attendance:
+
+<img src="https://github.com/suyash-2004/Attendance_Automation/assets/61971096/356c5629-9f0f-4897-bc37-e7c2d6b3e2ca" alt="Screenshot" width="600"/>
+
+  -The **mark_attendance** function is responsible for marking attendance in the CSV file (**attendance.csv**).
+  -It reads the existing attendance data, checks if the current name is already in the list and if not, appends a new entry to the file with the corresponding details.
+
+  ### 2.)Main Execution:
+  
+  ```python
+<style>
+  .scrollable-code {
+    max-height: 300px;
+    overflow: scroll;
+  }
+</style>
+
+<div class="scrollable-code">
+
+# Your large Python code goes here
+def example_function():
+    # ... getimages()
+
+print("Encoding Images")
+time.sleep(0.5)
+knownencodings = find_encodings(images)
+print("Encoding Complete!")
+
+default_table()
+clear_attendance_file()
+
+print("Opening WebCam")
+
+time.sleep(0.3)
+
+cap = cv2.VideoCapture(0)
+
+while True:
+    success, img = cap.read()
+    imgs = cv2.resize(img, (0,0), fx=0.25, fy=0.25)
+    imgs = cv2.cvtColor(imgs, cv2.COLOR_BGR2RGB)
+
+    facelocCurrframe = list(face_recognition.face_locations(imgs))
+    encodCurrframe = face_recognition.face_encodings(imgs, facelocCurrframe)
+
+    for faceEncode, faceloc in zip(encodCurrframe, facelocCurrframe):
+        matches = face_recognition.compare_faces(knownencodings, faceEncode, tolerance=0.6)
+        facedist = face_recognition.face_distance(knownencodings, faceEncode)
+        matchindex = np.argmin(facedist)
+        if matches[matchindex]:
+            name = classnames[matchindex].upper()
+            y1, x2, y2, x1 = faceloc
+            y1, x2, y2, x1 = y1*4, x2*4, y2*4, x1*4
+            cv2.rectangle(img, (x1, y1), (x2, y2), (0, 255, 0), 2)
+            cv2.putText(img, name, (faceloc[0], faceloc[2]), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
+            results = getstd_details_db(name)
+            roll = results[0]
+            phn = results[1]
+            curtime = results[2]
+            mark_attendance(name, roll, phn, curtime)
+
+    cv2.imshow('Webcam', img)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+            with open('attendance.csv', 'r') as att:
+                data_att = att.readlines()
+                for line_att in data_att[1:]:
+                    spt_data_att = line_att.strip().split(",")
+                    dtstring = spt_data_att[5]
+                    roll = spt_data_att[2]
+                    presentval = ('P', dtstring, roll)
+                    cursor.execute(query_update, presentval)
+            con.commit()
+            con.close()
+            break
+
+cv2.destroyAllWindows()
+
+# ...
+
+</div>
 
 
 ## Usage
