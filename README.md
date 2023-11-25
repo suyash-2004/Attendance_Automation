@@ -25,7 +25,7 @@ This project leverages the Face Recognition library in Python, along with other 
 ## Methodology
 
   ### 1.)Loading Images:
-  `def getimages():
+  ```def getimages():
     path = "ImagesAttendance"
     global images, classnames
     with open('Attendance_Database.csv', 'r') as att_db:
@@ -34,7 +34,7 @@ This project leverages the Face Recognition library in Python, along with other 
         for row in reader:
             curimg = cv2.imread(f'{path}/{row[5]}')
             images.append(curimg)
-            classnames.append(row[1].upper())`
+            classnames.append(row[1].upper())```
   
 
 ## Usage
