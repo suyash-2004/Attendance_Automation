@@ -1,6 +1,6 @@
 # Attendance Automation using Python with Face Recognition
 
-Welcome to the Attendance Automation project! This is a mini project for my 2nd year (3rd semester) coursework, focusing on automating attendance tracking through the power of Python with face recognition.
+This project, "Attendance automation using face detection in Python", focuses on automating attendance tracking through the power of Python with face recognition.
 
 
 <div align="center"> 
